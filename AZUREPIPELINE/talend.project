@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_NwyM8Y2MEeyjuvi5Rl92cg" label="AzurePipeline" language="java" technicalLabel="AZUREPIPELINE" author="_NwyM8o2MEeyjuvi5Rl92cg" productVersion="Talend Cloud Data Management Platform-8.0.1.20211109_1610" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/arachkonda/AzurePipeline.git&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DQ" bigData="false">
+    <migrationTask xmi:id="_Nx1V0I2MEeyjuvi5Rl92cg" id="org.talend.repository.model.migration.CheckProductVersionMigrationTask" breaks="7.1.0" version="7.1.1"/>
+  </TalendProperties:Project>
+  <TalendProperties:User xmi:id="_NwyM8o2MEeyjuvi5Rl92cg" login="archanarao.rachakonda@trial37502.us.talend.com" firstName="archana" lastName="rachakonda" type="DQ"/>
+</xmi:XMI>
