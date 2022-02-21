@@ -27,7 +27,7 @@ steps:
   - task: DownloadSecureFile@1
     name: cibuilder
     inputs:
-      secureFile: Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1builder-maven-plugin-8.0.1.zip
+      secureFile: Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1.zip
 - task: ExtractFiles@1
 
      - task: Maven@3
