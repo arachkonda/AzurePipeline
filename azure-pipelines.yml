@@ -61,7 +61,7 @@ steps:
       goals: 'install:install-file' 
       options: '--batch-mode --settings $(settings_xml.secureFilePath) '
       mavenOptions: |
-        -Dfile=./builder/Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1 /builder-maven-plugin-8.0.1.jar
+        -Dfile=./builder/Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1/builder-maven-plugin-8.0.1.jar
         -DpomFile=./builder/Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1/builder-maven-plugin-8.0.1.pom
   
 #      mavenPomFile: '$(Build.Repository.LocalPath)/$(project_name)/poms/pom.xml'
