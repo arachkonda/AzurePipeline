@@ -42,10 +42,6 @@ steps:
     inputs:
       secureFile: sample_pom.xml
 
-  - task: DownloadSecureFile@1
-    name: cibuilder
-    inputs:
-      secureFile: Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1.zip
   - task: ExtractFiles@1
     inputs:
       archiveFilePatterns: '$(cibuilder.secureFilePath)'
@@ -54,15 +50,6 @@ steps:
       overwriteExistingFiles: true
 
 #mvn install:install-file -Dfile=./8.0.1/builder-maven-plugin-8.0.1.jar -DpomFile=./8.0.1/builder-maven-plugin-8.0.1.pom
-  - task: Maven@3
-    displayName: 'Maven Install builder plugin'
-    inputs:
-      mavenPomFile: '$(pom_xml.secureFilePath)'
-      goals: 'install:install-file' 
-      options: '--batch-mode --settings $(settings_xml.secureFilePath) '
-      mavenOptions: |
-        -Dfile=./builder/Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1/builder-maven-plugin-8.0.1.jar
-        -DpomFile=./builder/Talend-CI-Builder-Maven-Plugin-20211109_1610-V8.0.1/builder-maven-plugin-8.0.1.pom
   
 #      mavenPomFile: '$(Build.Repository.LocalPath)/$(project_name)/poms/pom.xml'
 # mavenPomFile: '$(pom_xml.secureFilePath)'
@@ -70,7 +57,7 @@ steps:
     displayName: 'Maven Install P2 and generate Poms'
     inputs:
       mavenPomFile: '$(pom_xml.secureFilePath)'
-      goals: 'org.talend.ci:builder-maven-plugin:8.0.1:generateAllPoms' 
+      goals: 'org.talend.ci:builder-maven-plugin:8.0.4:generateAllPoms' 
       options: '--batch-mode --settings $(settings_xml.secureFilePath) $(talend_ci_config)'
       publishJUnitResults: false
 
