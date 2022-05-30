@@ -42,12 +42,6 @@ steps:
     inputs:
       secureFile: sample_pom.xml
 
-  - task: ExtractFiles@1
-    inputs:
-      archiveFilePatterns: '$(cibuilder.secureFilePath)'
-      destinationFolder: '/home/vsts/work/_temp/builder/'
-      cleanDestinationFolder: true 
-      overwriteExistingFiles: true
 
 #mvn install:install-file -Dfile=./8.0.1/builder-maven-plugin-8.0.1.jar -DpomFile=./8.0.1/builder-maven-plugin-8.0.1.pom
   
