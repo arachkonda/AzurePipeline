@@ -19,7 +19,7 @@ variables:
     -Dlicense.path=$(license.secureFilePath)
     -Dtalend.studio.p2.base=$(p2_base_url)
     -Dtalend.studio.p2.update=$(p2_update_url)
-    -Pcloud-publisher
+  
     -Dcloud.publisher.screenshot=true
     -Dservice.url=$(CLOUD_URL)
     -Dcloud.token=$(CLOUD_TOKEN)
