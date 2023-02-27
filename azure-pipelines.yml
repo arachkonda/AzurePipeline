@@ -19,13 +19,7 @@ variables:
     -Dlicense.path=$(license.secureFilePath)
     -Dtalend.studio.p2.base=$(p2_base_url)
     -Dtalend.studio.p2.update=$(p2_update_url)
-#Parameters TO PUBLISH TO TALEND CLOUD MANAGEMENT CONSOLE:    
-    
-    -Dservice.url=$(talend_cloud_url)
-    -Dcloud.token=$(talend_cloud_token)          
-    -Dcloud.publisher.screenshot=true 
-    -Dcloud.publisher.environment=Dev
-    -Dcloud.publisher.workspace=Cloud_Run
+
 
 
 steps:
