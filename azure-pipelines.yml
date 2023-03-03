@@ -43,11 +43,6 @@ steps:
     name: license
     inputs:
       secureFile: license
- 
-- task: DownloadSecureFile@1
-    name: pom_xml
-    inputs:
-      secureFile: pom.xml
   
 #      mavenPomFile: '$(Build.Repository.LocalPath)/$(project_name)/poms/pom.xml'
 # mavenPomFile: '$(pom_xml.secureFilePath)'
