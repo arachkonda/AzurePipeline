@@ -23,12 +23,12 @@ variables:
     -Dtalend.studio.p2.base=$(p2_base_url)
     -Dtalend.studio.p2.update=$(p2_update_url)
 #Parameters TO PUBLISH TO TALEND CLOUD MANAGEMENT CONSOLE:    
-   # -Pcloud-publisher
-    #-Dservice.url=$(talend_cloud_url)
-    #-Dcloud.token=$(talend_cloud_token)          
-   # -Dcloud.publisher.screenshot=true 
-   # -Dcloud.publisher.environment=XXX 
-    #-Dcloud.publisher.workspace=XXX
+    -Pcloud-publisher
+    -Dservice.url=$(talend_cloud_url)
+    -Dcloud.token=$(talend_cloud_token)          
+    -Dcloud.publisher.screenshot=true 
+    -Dcloud.publisher.environment=XXX 
+    -Dcloud.publisher.workspace=XXX
 #Uncomment the parameter TO PUBLISH TO AN ARTIFACT REPOSITORY: 
 #/!\ For your architecture to support this configuration, the artifact repository needs to be visible from the Azure agent running your pipeline.
 #    -DaltDeploymentRepository=releases::default::$(artifact_url)/XXX/
@@ -49,6 +49,11 @@ steps:
     name: license
     inputs:
       secureFile: license
+ 
+- task: DownloadSecureFile@1
+    name: pom_xml
+    inputs:
+      secureFile: pom.xml
   
 #      mavenPomFile: '$(Build.Repository.LocalPath)/$(project_name)/poms/pom.xml'
 # mavenPomFile: '$(pom_xml.secureFilePath)'
